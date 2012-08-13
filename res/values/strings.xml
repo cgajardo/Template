@@ -4,5 +4,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="edit_message">Editame!</string>
+    <string name="button_send">Enviame!</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_login">Login</string>
+    <string name="login">Ingresar</string>
 
 </resources>

@@ -10,7 +10,7 @@
     <string name="title_activity_login">Login</string>
     <string name="login">Ingresar</string>
     <string name="title_activity_add_document">AddDocumentActivity</string>
-    <string name="doc_title">Título del documento</string>
+    <string name="doc_title">Título del chiste</string>
     <string name="doc_title_hint">Título</string>
     <string name="doc_content">Contenido</string>
     <string name="mail">E-mail</string>
@@ -21,5 +21,7 @@
     <string name="search">Buscar</string>
     <string name="add_doc">Agregar documento</string>
     <string name="title_activity_show_repos">Repositories</string>
+    <string name="save">Guardar</string>
+    <string name="back">Volver</string>
 
 </resources>

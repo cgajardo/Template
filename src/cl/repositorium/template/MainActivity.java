@@ -11,11 +11,15 @@ import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.ClientContext;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.BasicHttpContext;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,6 +31,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	 public final static String EXTRA_MESSAGE = "cl.repositorium.template.MESSAGE";
+	 public static BasicHttpContext mHttpContext = null;
 	 /*
 	  * Home,
 	  * Search,
@@ -46,6 +51,11 @@ public class MainActivity extends Activity {
         	TextView error_alert = (TextView) findViewById(R.id.login_error);
         	error_alert.setText(message);
         }
+        
+        //inicializamos el contexto para almacenar las cookies 
+    	mHttpContext = new BasicHttpContext();
+    	CookieStore mCookieStore = new BasicCookieStore();        
+    	mHttpContext.setAttribute(ClientContext.COOKIE_STORE, mCookieStore);
     }
 
     @Override
@@ -67,6 +77,8 @@ public class MainActivity extends Activity {
     	HttpResponse response = null;
     	//realizamos una llamada a la URL correspondiente para loggear al usuario
     	HttpPost httppost = new HttpPost("http://www.repositorium.cl/api/v1.0/users/login");
+    	
+    	
     	String algo = null;
     	try {
             //vamos a agregar el username y password al POST que realizaremos luego
@@ -76,7 +88,7 @@ public class MainActivity extends Activity {
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
             //realizamos la llamada POST
-            response = httpclient.execute(httppost);
+            response = httpclient.execute(httppost, mHttpContext);
             algo = inputStreamToString(response.getEntity().getContent());
             
         } catch (UnsupportedEncodingException e) {

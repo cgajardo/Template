@@ -33,7 +33,7 @@ public class ShowRepos extends Activity {
     	//temporalmente dejamos la respuesta en null
     	HttpResponse response = null;
     	JSONArray repositories = null;
-    	//realizamos una llamada a la URL correspondiente para loggear al usuario
+    	//realizamos una llamada a la URL correspondiente para recuperar los repositorios
     	HttpGet httpget = new HttpGet("http://www.repositorium.cl/api/v1.0/repositories");
     	try {
             //realizamos la llamada POST

@@ -49,4 +49,14 @@
         android:inputType="textMultiLine"
         android:minLines="4" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/save" 
+        android:onClick="save" />
+
 </RelativeLayout>

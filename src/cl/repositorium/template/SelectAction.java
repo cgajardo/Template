@@ -31,7 +31,8 @@ public class SelectAction extends Activity {
     }
     
     public void go_add(View view){
-    	//TODO: enviar a la vista de agregaci—n
+    	Intent intent = new Intent(this, AddDocumentActivity.class);
+		startActivity(intent);
     }
     
 }

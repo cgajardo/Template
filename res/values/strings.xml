@@ -23,5 +23,7 @@
     <string name="title_activity_show_repos">Repositories</string>
     <string name="save">Guardar</string>
     <string name="back">Volver</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_challenge">ChallengeActivity</string>
 
 </resources>

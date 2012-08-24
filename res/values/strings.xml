@@ -25,5 +25,7 @@
     <string name="back">Volver</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_challenge">ChallengeActivity</string>
+    <string name="serachHint">Ingresa tu búsqueda</string>
+    <string name="submit">Enviar</string>
 
 </resources>

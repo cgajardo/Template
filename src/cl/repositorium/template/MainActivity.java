@@ -117,7 +117,7 @@ public class MainActivity extends Activity {
     
     
     //funci—n auxiliar para parsear la respuesta que nos entrega la API
-    private String inputStreamToString(InputStream is) throws IOException {
+    public static String inputStreamToString(InputStream is) throws IOException {
         String s = "";
         String line = "";
         // Wrap a BufferedReader around the InputStream

@@ -10,7 +10,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="@string/serachHint" />
 
     <Button
         android:id="@+id/button1"
@@ -19,7 +20,7 @@
         android:layout_below="@+id/searchField"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
-        android:text="@string/search"
-        android:onClick="search" />
+        android:onClick="search"
+        android:text="@string/search" />
 
 </RelativeLayout>

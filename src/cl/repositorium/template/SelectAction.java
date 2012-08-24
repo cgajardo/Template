@@ -27,7 +27,8 @@ public class SelectAction extends Activity {
     }
     
     public void go_search(View view){
-    	//TODO: enviar a la vista de busqueda
+    	Intent intent = new Intent(this, SearchActivity.class);
+		startActivity(intent);
     }
     
     public void go_add(View view){
